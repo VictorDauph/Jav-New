@@ -1,0 +1,80 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Directories
+/bin/
+out/
+build/
+target/
+
+# IDE-specific files
+/.idea/
+/*.iml
+/.classpath
+/.project
+/.settings/
+/*.user
+/.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Maven and Gradle files (if used)
+*.jar
+*.war
+*.ear
+*.class
+*.db
+
+# JAR files
+*.jar
+
+# Temporary files
+*.tmp
+*.temp
+
+# Java file backup
+*~ 
+
+# Other IDEs
+*.sublime-project
+*.sublime-workspace
+*.swp
+
+# Maven specific files
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.lastUpdated
+
+# Gradle specific files
+.gradle/
+build/
+
+# Java source files
+*.log
+
+# Others
+*.orig
+*.patch
+
+# Ignore the eclipse metadata
+/.project
+/.classpath
+/.settings/
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+out/
+
+# Eclipse specific files
+.classpath
+.project
+.settings/
