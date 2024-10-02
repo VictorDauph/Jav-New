@@ -1,4 +1,5 @@
 module dataRepository {
-	requires dataContract;
-	requires graphics;
+
+
+	requires transitive dataContract;
 }
