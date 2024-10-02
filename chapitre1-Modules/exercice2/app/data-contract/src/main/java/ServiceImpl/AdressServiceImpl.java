@@ -1,9 +1,9 @@
-package Service;
+package ServiceImpl;
 
 import Iservice.AdressServiceI;
 import models.Adress;
 
-public class AdressService implements AdressServiceI {
+public class AdressServiceImpl implements AdressServiceI {
 	@Override
 	public String getCountry(Adress adress) {
 		
