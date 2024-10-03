@@ -1,6 +1,6 @@
-
 module graphics {
+	exports graphicWindows;
 
-	requires business;
 	requires dataRepository;
+	requires business;
 }
