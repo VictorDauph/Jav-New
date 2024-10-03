@@ -4,15 +4,11 @@
   <artifactId>app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>app</name>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>data-repository</module>
-  	<module>graphics</module>
-  	<module>business</module>
-  </modules>
+  <packaging>jar</packaging>
+ 
   
   <properties>
-    <maven.compiler.source>9</maven.compiler.source> <!-- The source Java version -->
-    <maven.compiler.target>9</maven.compiler.target> <!-- The target Java version -->
+    <maven.compiler.source>21</maven.compiler.source> <!-- The source Java version -->
+    <maven.compiler.target>21</maven.compiler.target> <!-- The target Java version -->
 </properties>
 </project>
