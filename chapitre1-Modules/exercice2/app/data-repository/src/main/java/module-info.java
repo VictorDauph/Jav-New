@@ -1,3 +1,6 @@
 module dataRepository {
-	requires dataContract;
+
+	exports repoModels;
+	exports serviceInterfaces;
+
 }

@@ -1,7 +1,7 @@
-
 module graphics {
+	exports graphicWindows;
 
 	requires dataRepository;
-	requires dataContract;
-	uses Iservice.AdressServiceI;
+	requires business;
+
 }

@@ -1,19 +1,18 @@
 package graphicWindows;
 
-import java.util.ServiceLoader;
 
-import Iservice.AdressServiceI;
-import models.Adress;
+import ServiceImplementation.ServiceImpl;
+import repoModels.Customer;
 
 public class StartWindow {
 
 	public static void main(String[] args) {
-		AdressServiceI adressService= ServiceLoader.load(AdressServiceI.class).findFirst().orElseThrow();
+		ServiceImpl service = new ServiceImpl();
 		System.out.println("Start Window Launched");
 		
-		Adress adress = new Adress("rue des bois","France","Nancy");
+		Customer customer = new Customer("Victor","Dauphin",36);
 		
-	   System.out.println(adressService.getCountry(adress));
+	   System.out.println(service.getAge(customer));
 
 	}
 

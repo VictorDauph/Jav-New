@@ -16,7 +16,7 @@
 		</dependency>
 	    <dependency>
 		    <groupId>com.bigcorp.project</groupId>
-		    <artifactId>business</artifactId>
+		    <artifactId>data-contract</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
