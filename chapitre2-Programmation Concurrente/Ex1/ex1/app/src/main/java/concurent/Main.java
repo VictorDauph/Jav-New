@@ -1,35 +1,25 @@
 package concurent;
 import java.util.concurrent.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
-    	
-    	List<Callable<Integer>> callables = new ArrayList<>();
-    	
-    	//Instanciation des Callables
-    	for (int i = 0; i < 10; i++) {
-	    	Callable<Integer> callable = new RandomCallable();
-	    	callables.add(callable);
-    	}
-    	
-        // Création d'un ExecutorService avec un FixedThreadPool de 10 threads
-        ExecutorService executorService = Executors.newFixedThreadPool(10);
+	public static void main(String[] args) {
+        int numberOfRunnables = 5;  // Nombre de tâches à exécuter
         
-
-        	try {
-        		System.out.println("Premier résultat obtenu : " + executorService.invokeAny(callables));
-			} catch (InterruptedException e) {
-
-				e.printStackTrace();
-			} catch (ExecutionException e) {
-
-				e.printStackTrace();
-			}finally {
-				executorService.shutdown();
-			}     
+        // Création d'une barrière qui attendra le démarrage de 5 threads (numberOfRunnables)
+        CyclicBarrier barrier = new CyclicBarrier(numberOfRunnables, () -> {
+            System.out.println("Tous les threads sont prêts, démarrage simultané !");
+        });
         
+        // Créer un ExecutorService avec un FixedThreadPool de 5 threads
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        
+        // Lancer les Runnables, on passe la barrière en param de chaque runnable pour qu'ils soient bloqués, jusqu'à que le 5 ème l'atteigne
+        for (int i = 0; i < numberOfRunnables; i++) {
+            executorService.submit(new TaskRunnable(barrier)); 
+        }
+        
+        // Arrêter l'ExecutorService après l'exécution des tâches
+        executorService.shutdown();
     }
 }
