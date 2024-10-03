@@ -1,5 +1,5 @@
 module dataRepository {
 
-
-	requires transitive dataContract;
+	exports repoModels;
+	exports serviceInterfaces;
 }
