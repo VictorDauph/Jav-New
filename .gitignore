@@ -9,6 +9,8 @@
 out/
 build/
 target/
+.metadata/
+/.metadata/
 
 # IDE-specific files
 /.idea/
