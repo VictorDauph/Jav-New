@@ -19,7 +19,7 @@ public class Usine {
         };
         		
         // Appel de la méthode travail avec une lambda pour simuler le traitement
-        Matiere matiereUsinee = machine.travail(acier, travail);
+        machine.travail(acier, travail);
                 
         // Utilisation d'une référence de méthode pour appeler System.out.println()
         machine.afficheNom(acier, System.out::println);
