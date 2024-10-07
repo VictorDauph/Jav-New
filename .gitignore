@@ -9,7 +9,7 @@
 out/
 build/
 target/
-.metada/
+.metadata/
 /.metadata/
 
 # IDE-specific files
