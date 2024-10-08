@@ -9,14 +9,14 @@
   
   <artifactId>graphics</artifactId>
 	  <dependencies>
-		  <dependency>
-		    <groupId>com.bigcorp.project</groupId>
-		    <artifactId>data-repository</artifactId>
-		    <version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	    <dependency>
 		    <groupId>com.bigcorp.project</groupId>
 		    <artifactId>data-contract</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+			    <dependency>
+		    <groupId>com.bigcorp.project</groupId>
+		    <artifactId>business</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
