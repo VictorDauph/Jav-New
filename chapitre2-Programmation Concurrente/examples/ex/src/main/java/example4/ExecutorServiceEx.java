@@ -10,13 +10,8 @@ public class ExecutorServiceEx {
 		// Mesurer le temps de début
 		long startTime = System.currentTimeMillis();
 		
-		Runnable runnable = new LongTaskRunnable();  
-		ExecutorService executorService =  Executors.newFixedThreadPool(4);  
-		executorService.execute(runnable);  
-		executorService.execute(runnable);  
-		executorService.execute(runnable);  
-		executorService.execute(runnable);  
-		executorService.shutdown();
+		  		
+		//code ici
 		
 		// Attendre que toutes les tâches soient terminées avant de mesurer le temps
         while (!executorService.isTerminated()) {

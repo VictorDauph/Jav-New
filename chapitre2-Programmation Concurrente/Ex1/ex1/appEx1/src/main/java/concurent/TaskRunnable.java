@@ -6,18 +6,15 @@ import java.util.concurrent.CyclicBarrier;
 
 class TaskRunnable implements Runnable {
 
-    private CyclicBarrier barrier;
 
-    public TaskRunnable(CyclicBarrier barrier) {
-        this.barrier = barrier;
-    }
 
     @Override
     public void run() {
         try {
             // Attente sur la barrière jusqu'à ce que tous les threads soient prêts
             System.out.println(Thread.currentThread().getName() + " est prêt et attend.");
-            barrier.await();  // Attente que tous les threads atteignent ce point
+            
+            //Point d'arrêt
 
             // Simuler un temps d'exécution aléatoire entre 0 et 10 secondes
             Random random = new Random();
