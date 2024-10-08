@@ -1,7 +1,6 @@
-
 module graphics {
 
-	requires dataRepository;
-	requires dataContract;
+	requires business;
 	uses Iservice.AdressServiceI;
+	uses Iservice.BusinessServiceI;
 }
