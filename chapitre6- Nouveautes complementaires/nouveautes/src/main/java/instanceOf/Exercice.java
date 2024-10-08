@@ -34,25 +34,11 @@ public class Exercice {
 
     // Méthode avec l'ancien instanceof
     public static void roulerAncien(Vehicule vehicule) {
-        if (vehicule instanceof Auto) {
-            Auto auto = (Auto) vehicule; // Cast explicite
-            auto.rouleSurAutoroute();
-        } else if (vehicule instanceof Velo) {
-            Velo velo = (Velo) vehicule; // Cast explicite
-            velo.rouleSurChemin();
-        } else {
-            System.out.println("Type de véhicule non pris en charge.");
-        }
+
     }
 
     // Méthode avec le nouveau instanceof (pattern matching)
     public static void roulerNouveau(Vehicule vehicule) {
-        if (vehicule instanceof Auto auto) { // Pattern matching
-            auto.rouleSurAutoroute();
-        } else if (vehicule instanceof Velo velo) { // Pattern matching
-            velo.rouleSurChemin();
-        } else {
-            System.out.println("Type de véhicule non pris en charge.");
-        }
+ 
     }
 }

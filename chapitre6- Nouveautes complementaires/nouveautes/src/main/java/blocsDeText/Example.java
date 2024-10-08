@@ -2,13 +2,9 @@ package blocsDeText;
 
 public class Example {
 	public static void main(String[] args) {
-		String premierTextBlock = """
-                Le Bret.
-                Si tu laissais un peu ton âme mousquetaire
-                La fortune et la gloire…  Cyrano.
-                Et que faudrait-il faire ?
-                (...)
-                """;
+		
+		// ecrire bloc de texte
+		String premierTextBlock =;
 		System.out.println(premierTextBlock);
 
 				//remplace
