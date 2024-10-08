@@ -21,8 +21,10 @@ public class LongTaskCallable implements Callable<Long>  {
 		
 		Callable<Long> callable = new LongTaskCallable();  
 		FutureTask<Long> futureTask = new  FutureTask<>(callable);
-		new Thread(futureTask).start();  try {
-		Long result = futureTask.get();  System.out.println(String.format("Le résultat  vaut : %s", result));
+		new Thread(futureTask).start();  
+		try {
+			Long result = futureTask.get();  
+			System.out.println(String.format("Le résultat  vaut : %s", result));
 		} catch (InterruptedException | ExecutionException e) {  
 			throw new RuntimeException(e);
 		}
