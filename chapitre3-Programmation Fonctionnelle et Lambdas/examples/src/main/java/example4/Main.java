@@ -10,25 +10,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		List<User> userList = generateUserList();
 		
-		List<User> transformedList= userList.stream()
-				.distinct() //Pour que distinct fonctionne, il faut bien override equal et hashcode pour les objets.
-				.map(user->{
-					user.setId(null);
-					return user;})
-				.collect(Collectors.toList());
-		
-		// Afficher la liste transformée
-        transformedList.forEach(System.out::println);
-				
-        // Concaténer les hashCodes des utilisateurs
-        String listStringified = transformedList.stream()
-                .map(user -> String.valueOf(user.toString())) // Convertir user en String
-                .reduce("", (partialString, hashCode) -> partialString + hashCode); // Concaténer les strings
-
-        // Afficher le résultat
-        System.out.println("Concaténation des strings: " + listStringified);
 
 	}
 	

@@ -1,3 +1,3 @@
 module a {
-	exports servicePackage;
+
 }
