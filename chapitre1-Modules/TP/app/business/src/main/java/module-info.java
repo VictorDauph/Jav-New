@@ -1,8 +1,10 @@
 import Iservice.AdressServiceI;
 import Iservice.BusinessServiceI;
 import businessServices.AdressServiceImpl;
-import businessServices.BusinessServiceImpl;
+
 
 module business {
-
+	requires transitive dataContract;
+	exports businessServices;
+	provides AdressServiceI with businessServices.AdressServiceImpl;
 }
