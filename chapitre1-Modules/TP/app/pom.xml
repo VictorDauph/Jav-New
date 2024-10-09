@@ -9,7 +9,6 @@
   	<module>data-contract</module>
   	<module>data-repository</module>
   	<module>graphics</module>
-  	<module>Business</module>
   	<module>business</module>
   </modules>
   
