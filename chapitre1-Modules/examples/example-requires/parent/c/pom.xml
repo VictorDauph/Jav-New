@@ -5,17 +5,5 @@
     <artifactId>parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>c</artifactId>
-  <dependencies>
-  	<dependency>
-  		<groupId>com.bigcorp</groupId>
-  		<artifactId>a</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  	  	<dependency>
-  		<groupId>com.bigcorp</groupId>
-  		<artifactId>b</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  </dependencies>
+  <artifactId>a</artifactId>
 </project>
