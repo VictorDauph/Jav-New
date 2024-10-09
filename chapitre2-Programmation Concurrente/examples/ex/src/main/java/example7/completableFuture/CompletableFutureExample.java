@@ -5,6 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 public class CompletableFutureExample {
     public static void main(String[] args) {
@@ -18,6 +19,8 @@ public class CompletableFutureExample {
                 // Ouverture de la connexion HTTP
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
+                conn.setConnectTimeout(5000); // 5 secondes pour établir la connexion
+                conn.setReadTimeout(5000);    // 5 secondes pour lire les données
                 conn.connect();
 
                 // Vérifier si la réponse est 200 (OK)
@@ -41,13 +44,21 @@ public class CompletableFutureExample {
                 throw new IllegalStateException("Erreur lors de l'appel à l'API", e);
             }
         });
+        
+     // Attendre que la future soit terminée pour éviter que le programme se termine trop tôt
+        future.join();
+        
 
         // Traitement de la réponse une fois disponible
-        future.thenAccept(response -> {
-            System.out.println("Réponse de l'API : " + response);
-        });
+        
+            try {
+				System.out.println("Réponse de l'API : " + future.get());
+			} catch (InterruptedException | ExecutionException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 
-        // Attendre que la future soit terminée pour éviter que le programme se termine trop tôt
-        future.join();
+
+        
     }
 }
