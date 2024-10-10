@@ -16,8 +16,23 @@ public class ResourceTask implements Runnable {
 
     public void run() {
         // Utilisation de CompletableFuture pour exécuter beginTransaction et endTransaction
-
-        // Optionnel : attendre que la transaction soit terminée
-
+        CompletableFuture<Void> transactionFuture;
+		try {
+			transactionFuture = resource.beginTransaction()
+			        .thenCompose(v -> {
+						try {
+							return resource.endTransaction();
+						} catch (InterruptedException | TransactionException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							return CompletableFuture.completedFuture(null);
+						}
+					});
+	        // Optionnel : attendre que la transaction soit terminée
+	        transactionFuture.join(); // Bloque le thread jusqu'à la fin de la transaction
+		} catch (InterruptedException | TransactionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
