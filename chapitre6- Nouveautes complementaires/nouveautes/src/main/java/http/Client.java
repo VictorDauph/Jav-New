@@ -23,7 +23,7 @@ public class Client {
 		
 		// Travail en mode asynchrone avec un CompletableFuture.
 		// La requête est émise, mais le thread peut continuer à travailler  
-		CompletableFuture<String> cf = httpClient.sendaAsync(
+		CompletableFuture<String> cf = httpClient.sendAsync(
 		httpRequest,
 		HttpResponse.BodyHandlers.ofString()).thenApply(HttpResponse::body);
 	
