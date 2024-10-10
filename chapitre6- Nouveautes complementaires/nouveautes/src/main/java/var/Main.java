@@ -1,6 +1,9 @@
 package var;
 
+import java.util.List;
 import java.util.Set;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 public class Main {
 
@@ -21,6 +24,17 @@ public class Main {
 		var monMetal = new Metal();
 		monMetal = new Or();
 		var monArgent = new Argent();
+		
+		 Function<List<String>,Integer> lambda =(List<String> list) -> list.size() ; // Ici, le type des paramètres est explicitement donné
+		
+		 Function<List<String>,Integer> lambda2 =(var list) -> list.size();  // Ici, tous les paramètres utilisent `var`
+		
+		 BiFunction<List<String>,String,Integer> lambda3 = (var list, var s) -> list.size() ; // Erreur : on mélange `var` et une déclaration typée explicite
+
+
+
+		
+		
 	}
 
 }
