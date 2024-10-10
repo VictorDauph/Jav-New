@@ -9,7 +9,17 @@ import example4.models.User;
 public class Main {
 
 	public static void main(String[] args) {
+List<User> userList = generateUserList();
 		
+		List<User> transformedList= userList.stream()
+				.distinct() //Pour que distinct fonctionne, il faut bien override equal et hashcode pour les objets.
+				.map(user->{
+					user.setId(null);
+					return user;})
+				.collect(Collectors.toList());
+		
+		// Afficher la liste transformée
+        transformedList.forEach(System.out::println);
 		
 
 	}
