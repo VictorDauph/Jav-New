@@ -17,6 +17,7 @@ public class Main {
 	        String nomCourt = "Paul";
 	        String nomLong = "Alexander le grand";
 
+
 	        System.out.println(crm.describeObject(user));          // User: Dupont Jean, Age: 30, ID: 123
 	        System.out.println(crm.describeObject(product));       // Product: Ordinateur, Prix: 999.99, Stock: 10
 	        System.out.println(crm.describeObject(order));         // Order ID: 456, Utilisateur: Dupont, Montant Total: 1299.99
