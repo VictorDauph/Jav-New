@@ -3,7 +3,7 @@ package lambda;
 import functionalInterfaces.Travail;
 
 public class Machine {
-	//implémenter travail
-	public Matiere travail();
+	public Matiere travail(Matiere matiere, Travail traitement) {
+		return traitement.appliquer(matiere);
 	}
 }

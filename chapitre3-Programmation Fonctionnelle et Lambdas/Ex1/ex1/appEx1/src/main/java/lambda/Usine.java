@@ -11,13 +11,19 @@ public class Usine {
         // Création d'une matière
         Matiere acier = new Matiere("Acier", 100.0f, 50.0f);
         
-        //déclarer la lambda
-        Travail travail= 
+        Travail travail= (Matiere matiere) -> {
+            matiere.setNom(matiere.getNom() + " Usiné");
+            matiere.setPrix(matiere.getPrix() * 1.2f);
+            matiere.setMasse(matiere.getMasse() * 0.8f);
+            return matiere;
+        };
         		
-        // Appel de la méthode travail avec la lambda en paramètre
-
+        // Appel de la méthode travail avec une lambda pour simuler le traitement
+        Matiere matiereUsinee = machine.travail(acier, travail);
 
         // Affichage des informations de la matière usinée
-
+        System.out.println("Nom : " + matiereUsinee.getNom());
+        System.out.println("Prix : " + matiereUsinee.getPrix());
+        System.out.println("Masse : " + matiereUsinee.getMasse());
     }
 }
