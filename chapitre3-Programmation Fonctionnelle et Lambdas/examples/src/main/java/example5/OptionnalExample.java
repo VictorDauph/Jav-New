@@ -12,7 +12,22 @@ public class OptionnalExample {
 
 	public static void main(String[] args) {
 		
-	
+		//La méthode max renvoie un Optional
+		List<User> users = Main.generateUserList();
+		User defaultUser= new User(null,null,null,0);
+		Optional<User> olderOpt = users.stream().max(Comparator.comparing(c ->  c.getAge()));
+		
+		User older = olderOpt.get();
+		
+		System.out.println(older);
+		
+		List<User> emptyUserList = new ArrayList<>();
+		
+		//orElse permet de renvoyer une valeur qui n'est jamais nulle
+		Optional<User> olderOptional = emptyUserList.stream().max(Comparator.comparing(c ->  c.getAge()));
+		older = olderOptional.orElse(defaultUser);
+		
+		System.out.println(older);
 		
 
 	}
