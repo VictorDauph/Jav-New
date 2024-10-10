@@ -13,8 +13,8 @@ public class Main {
 
 	        try {
 	            // Instanciation de LocalDate à partir de la chaîne de caractères
-	            //LocalDate date = LocalDate.parse(dateString, formatter);
-	            LocalDate date = LocalDate.of(1988,3,25);
+	            LocalDate date = LocalDate.parse(dateString, formatter);
+	            //LocalDate date = LocalDate.of(1988,3,25);
 
 	            // Vérification si l'année est bissextile
 	            if (date.isLeapYear()) {
