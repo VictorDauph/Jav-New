@@ -3,7 +3,7 @@ package virtualThreads;
 public class VirtualThread{
     public static void main(String[] args) {
         // Créer et démarrer plusieurs virtual threads
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 1000; i++) {
             // Crée un virtual thread: ofVirtual
             Thread.ofVirtual().start(() -> {
                 // Chaque thread virtuel exécute une tâche simple
