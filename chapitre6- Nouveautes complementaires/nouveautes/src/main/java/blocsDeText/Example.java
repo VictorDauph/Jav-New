@@ -4,7 +4,10 @@ public class Example {
 	public static void main(String[] args) {
 		
 		// ecrire bloc de texte
-		String premierTextBlock =;
+		String premierTextBlock =""" 
+				    knkjsnsl,s
+				fe
+				""";
 		System.out.println(premierTextBlock);
 
 				//remplace
